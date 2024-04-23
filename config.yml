@@ -1,0 +1,49 @@
+baseUrl: "https://flemesre.github.io"
+languageCode: en-us
+theme: terminal
+# controls the number of posts that appear on the home page before a new page is created
+paginate: 5
+
+params:
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName: posts
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor: green
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems: 3
+  # show selector to switch language
+  showLanguageSelector: false
+  # set theme to full screen width
+  fullWidthTheme: false
+  # center theme with default width
+  centerTheme: false
+
+languages:
+  en:
+    languageName: English
+    title: François-Guillaume Lemesre
+    subtitle: Personal website of François-Guillaume Lemesre
+    keywords: ''
+    menuMore: Show more
+    readMore: Read more
+    readOtherPosts: Read other posts
+    newerPosts: Newer posts
+    olderPosts: Older posts
+    missingContentMessage: Page not found...
+    missingBackButtonLabel: Back to home
+    minuteReadingTime: min read
+    words: words
+
+    params:
+      logo:
+        logoText: Terminal
+        logoHomeLink: /
+
+    menu:
+      main:
+      - identifier: about
+        name: About
+        url: /about
+      - identifier: showcase
+        name: Showcase
+        url: /showcase
