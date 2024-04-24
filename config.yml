@@ -16,34 +16,40 @@ params:
   # set theme to full screen width
   fullWidthTheme: false
   # center theme with default width
-  centerTheme: false
+  centerTheme: true
 
 languages:
   en:
     languageName: English
     title: François-Guillaume Lemesre
-    subtitle: Personal website of François-Guillaume Lemesre
-    keywords: ''
-    menuMore: Show more
-    readMore: Read more
-    readOtherPosts: Read other posts
-    newerPosts: Newer posts
-    olderPosts: Older posts
-    missingContentMessage: Page not found...
-    missingBackButtonLabel: Back to home
-    minuteReadingTime: min read
-    words: words
 
     params:
       logo:
-        logoText: Terminal
+        logoText: /home/flemesre
         logoHomeLink: /
+      subtitle: Personal website of François-Guillaume Lemesre
+      keywords: ''
+      menuMore: Show more
+      readMore: Read more
+      readOtherPosts: Read other posts
+      newerPosts: Newer posts
+      olderPosts: Older posts
+      missingContentMessage: Page not found...
+      missingBackButtonLabel: Back to home
+      minuteReadingTime: min read
+      words: words
 
     menu:
       main:
       - identifier: about
         name: About
         url: /about
-      - identifier: showcase
-        name: Showcase
-        url: /showcase
+        weight: 1
+      - identifier: cv
+        name: Curriculum Vitae
+        url: /resume
+        weight: 2
+      - identifier: posts
+        name: Posts
+        url: /
+        weight: 3
