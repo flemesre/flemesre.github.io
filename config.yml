@@ -19,6 +19,27 @@ params:
   fullWidthTheme: false
   # center theme with default width
   centerTheme: true
+  # privacy
+  privacy:
+    disqus:
+      disable: true
+    googleAnalytics:
+      disable: false
+      respectDoNotTrack: true
+    instagram:
+      disable: true
+      simple: true
+    twitter:
+      disable: false
+      enableDNT: true
+      simple: true
+    vimeo:
+      disable: true
+      enableDNT: true
+      simple: true
+    youtube:
+      disable: false
+      privacyEnhanced: true
 
 languages:
   en:
@@ -58,4 +79,8 @@ languages:
       - identifier: posts
         name: Posts
         url: /posts
+        weight: 4
+      - identifier: privacy
+        name: Privacy
+        url: /privacy
         weight: 4

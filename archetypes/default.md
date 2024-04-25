@@ -7,8 +7,8 @@ cover = ""
 tags = ["", ""]
 keywords = ["", ""]
 description = ""
-showFullContent = false
+showFullContent = true
 readingTime = false
 hideComments = false
-color = "" #color from the theme settings
+color = "green" #color from the theme settings
 +++
