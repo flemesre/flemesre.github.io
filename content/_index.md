@@ -13,7 +13,7 @@ hideComments = false
 color = "green" #color from the theme settings
 +++
 
-# Hello.
+## Hello.
 
 I am a ML/software engineeer at Huron Digital Pathology, in St. Jacobs, Ontario. I mostly work on computer vision problems in the field of digital pathology. Previously, I completed a BSc in Mathematical Physics at the University of Waterloo.
 

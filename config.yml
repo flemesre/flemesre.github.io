@@ -2,14 +2,14 @@ baseUrl: "https://flemesre.github.io"
 languageCode: en-us
 theme: terminal
 # controls the number of posts that appear on the home page before a new page is created
-paginate: 5
+pagerSize: 5
 # Google analytics
 googleAnalytics: G-PDBXPFXMR8
 
 params:
   # dir name of your blog content (default is `content/posts`)
   contentTypeName: posts
-  # ["orange", "blue", "red", "green", "pink"]
+  # ["orange", "blue", "red", "green", "pink"] - deprecated, use terminal.css now
   themeColor: green
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems: 4
@@ -19,6 +19,39 @@ params:
   fullWidthTheme: false
   # center theme with default width
   centerTheme: true
+  # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+  # then the file will be used as a cover automatically.
+  # With this option you don't have to put the `cover` param in a front-matter.
+  autoCover: true
+  # set post to show the last updated
+  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  showLastUpdated: false
+  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+  # updatedDatePrefix: "Updated"
+  # whether to show a page's estimated reading time
+  # readingTime: false # default
+
+  # whether to show a table of contents
+  # can be overridden in a page's front-matter
+  # Toc: false # default
+  # set title for the table of contents
+  # can be overridden in a page's front-matter
+  # TocTitle: "Table of Contents" # default
+
+  # Set date/time format for posts
+  # This will impact the date/time displayed on
+  # index.html, the posts list page, and on posts themselves
+  # This value can also be configured per-post on front matter
+  # If you have any issues with the timezone rendering differently
+  # than you expected, please ensure your timezone is correctly set
+  # on your server.
+  # This value can be customized according to Hugo documentation:
+  # https://gohugo.io/functions/time/format/
+  # Default value (no changes needed):
+  # dateFormat: "2006-01-02"
+  # Example format, with date, time, and timezone abbreviation:
+  # dateFormat: "2006-01-02 3:04:06 PM MST"
+
   # privacy
   privacy:
     disqus:
@@ -30,7 +63,7 @@ params:
       disable: true
       simple: true
     twitter:
-      disable: false
+      disable: true
       enableDNT: true
       simple: true
     vimeo:
@@ -68,9 +101,9 @@ languages:
         name: Home
         url: /
         weight: 1
-      - identifier: cv
-        name: Curriculum Vitae
-        url: /resume
+      - identifier: about
+        name: About
+        url: /about
         weight: 2
       - identifier: collection
         name: Collection
