@@ -84,3 +84,7 @@ To apply the PTM7950, the top and bottom plastic cover need to be removed. I fou
 Time to re-seat the heatsink carefully - it must be placed straight down to avoid tearing and shifting the PTM7950. Re-screw the heatsink in the order marked next to the screws, re-attach the wireless antennae, reconnect the battery, and we're ready to boot up the laptop and check if everything is working properly.
 
 After putting the cover back on and doing some benchmarks, the CPU was no longer throttling (in fact, I never saw it go above 87C, where before 90+C was common), and the GPU was ~5C cooler than with the factory paste. Significant temperature improvement, and my laptop is now slightly less likely to fry itself when I put it in my backpack. Success!
+
+
+## 2025-12-19 update:
+It turns out that this article was posted to [HackerNews](https://news.ycombinator.com/item?id=41165117) shortly after the original upload. I completely missed it, but better late than never.
