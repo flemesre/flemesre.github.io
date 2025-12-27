@@ -36,7 +36,7 @@ I still had some PTM 7950 leftover from the Zephyrus swap, so I decided to fix t
 
 Note: I strongly recommend using Framework's [official mainboard replacement guide](https://guides.frame.work/Guide/Mainboard/283?lang=en) to get to the point where you can disassemble the heatsink. It's easy and fast, but a couple of steps (notably the BIOS battery disconnect and removing the I/O expansion cards *before* everything else is disassembled) do need to be done in order.
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_1.jpg" position="center" style="border-radius: 2px;" caption="Framework 16 with the input modules and midplate removed." captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_1_small.jpg" position="center" style="border-radius: 2px;" caption="Framework 16 with the input modules and midplate removed." captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_1.jpg)
 
 A neat byproduct of the modular GPU design is that the CPU and GPU use fully separate heatsinks, unlike most other CPU+dGPU laptops. The fans are shared, but the CPU exhausts only from the sides (you can see the heatpipes curving away from the SoC on both sides above), and the GPU only from the back of the laptop (the heatpipes for the GPU actually poke out just above the interposer, above the SoC heatpipes and below what Framework calls the ventilation plate). This is much easier to deal with than the [maze of shared heatpipes and wires](/images/liquid_metal_photos/lm_1.jpg) that the G15 had, but it does mean that the CPU and GPU cannot share thermal capacity. In the Zephyrus, the CPU cooling was sufficient to sustain [65+ W](https://www.ultrabookreview.com/45159-asus-zephyrus-g15-ga503-review/#a5) of continuous load in a smaller and lighter machine, but Framework only rates their solution for 45W continuous. There's also less thermal mass available for passive cooling (i.e. less headroom to run with the fans off), though in practice the fans have never kicked on even with medium desktop use, meaning no dGPU or sustained multicore loads, even when charging.
 
@@ -46,33 +46,33 @@ I also took the opportunity to swap the MediaTek/AMD RZ616 Wifi card for the Int
 
 To get to the extremities of the CPU heatpipes, where the actual heatsinks are, we have to take off the ventilation midplate, which requires taking the dGPU module out and disconnecting the fingerprint reader. Framework's repair guide does a good job of showing all the steps and screws/unscrews required, so I'm not going to repeat everything here. The process does give us a great look at the interposer and the dGPU module.
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_5.jpg" position="center" style="border-radius: 2px;" caption="The interposer pins." captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_5_small.jpg" position="center" style="border-radius: 2px;" caption="The interposer pins." captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_5.jpg)
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_6.jpg" position="center" style="border-radius: 2px;" caption="The dGPU module, with the shared fans and rear-only heatsink clearly visible." captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_6_small.jpg" position="center" style="border-radius: 2px;" caption="The dGPU module, with the shared fans and rear-only heatsink clearly visible." captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_6.jpg)
 
 Under that heatsink is a re-badged and [slightly downclocked](https://www.techpowerup.com/gpu-specs/radeon-rx-7700s.c4015) RX 7600. I've found that the Framework 16 actually performs better than the R9 5900HS + RTX 3070 80W combo in my old G15. I don't know how much of that is due to the full-wattage 7700S beating the choked 3070 and how much is the Zen 4 R9 just bullying its Zen 3 predecessor.
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_9.jpg" position="center" style="border-radius: 2px;" caption="The mainboard sitting in the bottom cover." captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_9_small.jpg" position="center" style="border-radius: 2px;" caption="The mainboard sitting in the bottom cover." captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_9.jpg)
 
 ### LM removal
 
 Now we can remove the heatsink. Every single screw in the FW16 is captive, which is a lifesaver. The pressure plate screws are no exception, and they use the same Torx bit size as the rest of the machine. Note that the pressure plate screws are ordered, and that there are two screws, one near each bend, that join the heatpipes to the motherboard. This is the trickiest part of the process, because Framework uses a liquid metal compound that is solid at room temperature. You can run a CPU-heavy workload just before disassembly, or you can use a gentle source of heat (e.g. the bottom of a mug of hot water) applied directly to the SoC heatpipe assembly to try and loosen it, or you can just do what I did and very carefully use plastic tools to pry the heatsink from the board (the Framework screwdriver works well).
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_10.jpg" position="center" style="border-radius: 2px;" caption="Carnage." captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_10_small.jpg" position="center" style="border-radius: 2px;" caption="Carnage." captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_10.jpg)
 
 Like last time, we can see that a large amount of the liquid metal has seeped out. The pressure plate has the same little bumps that [were reported on the Framework forums](https://community.frame.work/t/fw16-batch-20-guild/50405/308). These are strangely absent from the [FW16 heatsink](https://frame.work/ca/en/products/16-heatsink-amd-ryzen-7040-series) on Framework's parts store. I think they're the "etched pattern in the surface of the vapor chamber" that Framework refers to in their LM blog post, which is supposed to help keep the LM in place using surface tension. It seems like it's done a pretty poor job here.
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_11.jpg" position="center" style="border-radius: 2px;" captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_11_small.jpg" position="center" style="border-radius: 2px;" captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_11.jpg)
 
 Now the surgery begins. Scraping the pressure plate with paper towels and the plastic end of the Framework screwdriver removed all the liquid metal chunks from it. The silicon die is a little trickier to work with.
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_16.jpg" position="center" style="border-radius: 2px;" caption="Suited up." captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_16_small.jpg" position="center" style="border-radius: 2px;" caption="Suited up." captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_16.jpg)
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_19.jpg" position="center" style="border-radius: 2px;" caption="Scalpel, please." captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_19_small.jpg" position="center" style="border-radius: 2px;" caption="Scalpel, please." captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_19.jpg)
 
 Thankfully the cold LM is solid enough that the bigger chunks can just be removed with careful use of tweezers and liberal application of isopropyl alcohol. Do not scrape the silicon die with metal, use plastic tools instead. Noctua's alcohol wipes work wonders here.
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_22.jpg" position="center" style="border-radius: 2px;" caption="The aftermath." captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_22_small.jpg" position="center" style="border-radius: 2px;" caption="The aftermath." captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_22.jpg)
 
 Some of the LM seems to be stuck to the transluscent insulator layer that covers the SMD components around the main die, but those bits shouldn't go anywhere and are probably safe to leave in, even if they liquefy again.
 
@@ -81,9 +81,9 @@ Some of the LM seems to be stuck to the transluscent insulator layer that covers
 
 The application process is identical to last time - cut the PTM 7950 to size (make sure to cover the silicon die fully), remove the protective plastic layers on both sides, and carefully lay it down on the chip. It might be easier to only remove the bottom plastic layer before application and carefully pry the upper layer once the PTM is on the die. As mentioned in my previous post, PTM 7950 is significantly easier to handle and apply if left in the freezer for 5-10m.
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_23.jpg" position="center" style="border-radius: 2px;" caption="Before" captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_23_small.jpg" position="center" style="border-radius: 2px;" caption="Before" captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_23.jpg)
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_25.jpg" position="center" style="border-radius: 2px;" caption="After" captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_25_small.jpg" position="center" style="border-radius: 2px;" caption="After" captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_25.jpg)
 
 We can now reassemble the laptop and test it. PTM 7950 supposedly needs a few thermal cycles to settle in properly - make sure the laptop is horizontal while you do that if you use a vertical stand. If your laptop doesn't turn back on at this point, remember that the BIOS battery disconnect will prevent any power from reaching the board until a charger is plugged back in.
 
@@ -110,6 +110,6 @@ It'll be interesting to see if the FW16 batches that use PTM from the factory us
 
 Overall, I'm happy with how this swap turned out - the Framework 16 should hopefully last me a long time.
 
-{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_27.jpg" position="center" style="border-radius: 2px;" caption="Just a happy little guy." captionPosition="center" captionStyle="color: black;" >}}
+[{{< figure src="/images/fw16_liquid_metal_photos/fw16_lm_27_small.jpg" position="center" style="border-radius: 2px;" caption="Just a happy little guy." captionPosition="center" captionStyle="color: black;" >}}](/images/fw16_liquid_metal_photos/fw16_lm_27.jpg)
 
 
