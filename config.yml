@@ -1,5 +1,5 @@
 baseUrl: "https://flemesre.github.io"
-languageCode: en-us
+locale: en-us
 theme: terminal
 # controls the number of posts that appear on the home page before a new page is created
 pagerSize: 5
@@ -76,7 +76,7 @@ params:
 
 languages:
   en:
-    languageName: English
+    label: English
     title: François-Guillaume Lemesre
 
     params:
